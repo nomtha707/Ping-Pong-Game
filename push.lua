@@ -1,3 +1,4 @@
+local love11 = (love.getVersion and love.getVersion() >= 11) or (love._version_major and love._version_major >= 11)
 local getDPI = love11 and love.window.getDPIScale or love.window.getPixelScale
 local windowUpdateMode = love11 and love.window.updateMode or function(width, height, settings)
   local _, _, flags = love.window.getMode()
